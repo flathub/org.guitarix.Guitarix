@@ -49,15 +49,6 @@
             "subdirectories": true,
             "no-autodownload": true,
             "autodelete": false
-        },
-        "org.freedesktop.LinuxAudio.Plugins.Guitarix": {
-            "directory": "extensions/Plugins/Guitarix",
-            "branch": "20.08",
-            "add-ld-path": "lib",
-            "bundle": true,
-            "subdirectories": true,
-            "no-autodownload": true,
-            "autodelete": false
         }
     },
     "modules": [
@@ -127,7 +118,7 @@
             },
             "build-commands": [
                 "ln -sf /usr/bin/python3 $FLATPAK_DEST/bin/python",
-                "python3 ./waf configure --prefix=$FLATPAK_DEST --lv2dir=${FLATPAK_DEST}/extensions/Plugins/Guitarix/lv2 --ldflags=-L$FLATPAK_DEST/lib --no-avahi --no-bluez --install-roboto-font --no-faust --cxxflags=\"$OPTIMIZATION -ftree-loop-linear -fno-math-errno -fno-signed-zeros -fstrength-reduce -pipe\" --includeconvolver --includeresampler",
+                "python3 ./waf configure --prefix=$FLATPAK_DEST --ldflags=-L$FLATPAK_DEST/lib --no-lv2 --no-avahi --no-bluez --install-roboto-font --no-faust --cxxflags=\"$OPTIMIZATION -ftree-loop-linear -fno-math-errno -fno-signed-zeros -fstrength-reduce -pipe\" --includeconvolver --includeresampler",
                 "python3 ./waf build -j $FLATPAK_BUILDER_N_JOBS",
                 "python3 ./waf install"
             ],
@@ -137,10 +128,7 @@
             "post-install": [
                 "install -Dm644 -t $FLATPAK_DEST/share/icons/hicolor/128x128/apps $FLATPAK_DEST/share/pixmaps/gx_head.png",
                 "install -Dm644 -t $FLATPAK_DEST/share/metainfo org.guitarix.Guitarix.metainfo.xml",
-                "install -d /app/extensions/Plugins",
-                "install -d /app/extensions/Plugins/Guitarix",
-                "install -Dm644 -t /app/extensions/Plugins/Guitarix/share/metainfo org.freedesktop.LinuxAudio.Plugins.Guitarix.metainfo.xml",
-                "appstream-compose --basename=org.freedesktop.LinuxAudio.Plugins.Guitarix --prefix=/app/extensions/Plugins/Guitarix --origin=flatpak org.freedesktop.LinuxAudio.Plugins.Guitarix"
+                "install -d /app/extensions/Plugins"
             ],
             "sources": [
                 {
@@ -149,21 +137,8 @@
                     "sha256": "797e46e07148fba89e46fac4efe73a5b3a98f070bca85db3d143de781b142c80"
                 },
                 {
-                    "type": "patch",
-                    "path": "guitarix-lv-zita.patch"
-                },
-                {
-                    "type": "patch",
-                    "path": "gx_no_glibmm.patch",
-                    "strip-components": 2
-                },
-                {
                     "type": "file",
                     "path": "org.guitarix.Guitarix.metainfo.xml"
-                },
-                {
-                    "type": "file",
-                    "path": "org.freedesktop.LinuxAudio.Plugins.Guitarix.metainfo.xml"
                 }
             ]
         }
