@@ -60,14 +60,12 @@
             "cleanup": [
                 "/include",
                 "/lib/cmake",
-                "*.a"
+                "*.a",
+                "*.so"
             ],
             "build-commands": [
                 "./bootstrap.sh --with-libraries=system,iostreams",
                 "./b2 install variant=release link=shared runtime-link=shared --prefix=/app -j $FLATPAK_BUILDER_N_JOBS"
-            ],
-            "cleanup": [
-                "*.so"
             ],
             "sources": [
                 {
