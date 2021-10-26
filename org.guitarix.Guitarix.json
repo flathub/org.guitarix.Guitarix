@@ -1,7 +1,7 @@
 {
     "app-id": "org.guitarix.Guitarix",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "20.08",
+    "runtime-version": "21.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "guitarix",
     "rename-desktop-file": "guitarix.desktop",
@@ -43,7 +43,7 @@
     "add-extensions": {
         "org.freedesktop.LinuxAudio.Plugins": {
             "directory": "extensions/Plugins",
-            "version": "20.08",
+            "version": "21.08",
             "add-ld-path": "lib",
             "merge-dirs": "ladspa;lv2",
             "subdirectories": true,
@@ -112,7 +112,8 @@
                             "OPTIMIZATION": "-march=armv8-a"
                         }
                     }
-                }
+                },
+                "cxxflags": "-fpermissive"
             },
             "build-commands": [
                 "ln -sf /usr/bin/python3 $FLATPAK_DEST/bin/python",
