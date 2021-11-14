@@ -23,7 +23,7 @@
         "--share=network",
         /* Allow other instances to see lockfiles */
         "--env=TMPDIR=/var/tmp",
-        "--env=LV2_PATH=/app/extensions/Plugins/lv2",
+        "--env=LV2_PATH=$HOME/.lv2:/app/extensions/Plugins/lv2",
         "--env=LADSPA_PATH=/app/extensions/Plugins/ladspa"
     ],
     "cleanup": [
