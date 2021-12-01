@@ -23,7 +23,6 @@
         "--share=network",
         /* Allow other instances to see lockfiles */
         "--env=TMPDIR=/var/tmp",
-        "--env=LV2_PATH=$HOME/.lv2:/app/extensions/Plugins/lv2:/app/lib/lv2",
         "--env=LADSPA_PATH=/app/extensions/Plugins/ladspa:/app/lib/ladspa"
     ],
     "cleanup": [
@@ -127,6 +126,8 @@
             "post-install": [
                 "install -Dm644 -t $FLATPAK_DEST/share/icons/hicolor/128x128/apps $FLATPAK_DEST/share/pixmaps/gx_head.png",
                 "install -Dm644 -t $FLATPAK_DEST/share/metainfo org.guitarix.Guitarix.metainfo.xml",
+                "mv /app/bin/guitarix /app/bin/guitarix.bin",
+                "install -Dm755 guitarix-wrap.sh /app/bin/guitarix",
                 "install -d /app/extensions/Plugins"
             ],
             "sources": [
@@ -138,6 +139,10 @@
                 {
                     "type": "file",
                     "path": "org.guitarix.Guitarix.metainfo.xml"
+                },
+                {
+                    "type": "file",
+                    "path": "guitarix-wrap.sh"
                 }
             ]
         }
