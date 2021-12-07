@@ -4,6 +4,7 @@
     "runtime-version": "21.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "guitarix",
+    "rename-appdata-file": "org.guitarix.guitarix.metainfo.xml",
     "rename-desktop-file": "guitarix.desktop",
     "rename-icon": "gx_head",
     "finish-args": [
@@ -125,7 +126,6 @@
             ],
             "post-install": [
                 "install -Dm644 -t $FLATPAK_DEST/share/icons/hicolor/128x128/apps $FLATPAK_DEST/share/pixmaps/gx_head.png",
-                "install -Dm644 -t $FLATPAK_DEST/share/metainfo org.guitarix.Guitarix.metainfo.xml",
                 "mv /app/bin/guitarix /app/bin/guitarix.bin",
                 "install -Dm755 guitarix-wrap.sh /app/bin/guitarix",
                 "install -d /app/extensions/Plugins"
@@ -133,12 +133,12 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://downloads.sourceforge.net/project/guitarix/guitarix/guitarix2-0.42.1.tar.xz",
-                    "sha256": "797e46e07148fba89e46fac4efe73a5b3a98f070bca85db3d143de781b142c80"
+                    "url": "https://github.com/brummer10/guitarix/releases/download/V0.43.0/guitarix2-0.43.0.tar.xz",
+                    "sha256": "482655fe668377b30befe3cdc26e9bf8b86a785b5c147abedffebaf1ed8bfca0"
                 },
                 {
-                    "type": "file",
-                    "path": "org.guitarix.Guitarix.metainfo.xml"
+                    "type": "patch",
+                    "path": "guitarix-metainfo.patch"
                 },
                 {
                     "type": "file",
