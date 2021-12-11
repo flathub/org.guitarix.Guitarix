@@ -133,8 +133,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/brummer10/guitarix/releases/download/V0.43.0/guitarix2-0.43.0.tar.xz",
-                    "sha256": "482655fe668377b30befe3cdc26e9bf8b86a785b5c147abedffebaf1ed8bfca0"
+                    "url": "https://github.com/brummer10/guitarix/releases/download/V0.43.1/guitarix2-0.43.1.tar.xz",
+                    "sha256": "353ba615a7219ac618a1fa9afb58b2f842a3ed729e4649631c37817e9aa352af"
                 },
                 {
                     "type": "patch",
