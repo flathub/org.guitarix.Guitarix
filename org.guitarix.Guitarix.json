@@ -1,7 +1,7 @@
 {
     "app-id": "org.guitarix.Guitarix",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "21.08",
+    "runtime-version": "22.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "guitarix",
     "rename-appdata-file": "org.guitarix.guitarix.metainfo.xml",
@@ -16,7 +16,6 @@
         /* MIDI */
         "--device=all",
         /* For Jack over pipewire */
-        "--system-talk-name=org.freedesktop.RealtimeKit1",
         "--filesystem=xdg-run/pipewire-0",
         /* Allow loading, saving files from anywhere (portals don’t work yet) */
         "--filesystem=home",
@@ -36,7 +35,7 @@
         "/lib/cmake",
         "/lib/lv2",
         "/lib/pkgconfig",
-        "/lib/python-3.9",
+        "/lib/python-3.*",
         "/share/man",
         "/share/doc",
         "/share/info",
@@ -48,7 +47,7 @@
     "add-extensions": {
         "org.freedesktop.LinuxAudio.Plugins": {
             "directory": "extensions/Plugins",
-            "version": "21.08",
+            "version": "22.08",
             "add-ld-path": "lib",
             "merge-dirs": "ladspa;lv2",
             "subdirectories": true,
@@ -57,7 +56,7 @@
         },
         "org.freedesktop.LinuxAudio.Plugins.Guitarix": {
             "directory": "extensions/Plugins/Guitarix",
-            "version": "21.08",
+            "version": "22.08",
             "add-ld-path": "lib",
             "bundle": true,
             "subdirectories": true,
@@ -110,7 +109,6 @@
             ]
         },
         "sassc.json",
-        "shared-modules/linux-audio/jack2.json",
         {
             "name": "guitarix",
             "buildsystem": "simple",
@@ -149,15 +147,15 @@
                 },
                 {
                     "type": "patch",
-                    "path": "guitarix-metainfo.patch"
+                    "path": "patches/guitarix-metainfo.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "patches/gx_no_glibmm.patch"
                 },
                 {
                     "type": "file",
                     "path": "guitarix-wrap.sh"
-                },
-                {
-                    "type": "patch",
-                    "path": "gx_no_glibmm.patch"
                 },
                 {
                     "type": "file",
