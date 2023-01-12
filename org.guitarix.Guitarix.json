@@ -147,11 +147,11 @@
                 },
                 {
                     "type": "patch",
-                    "path": "patches/guitarix-metainfo.patch"
-                },
-                {
-                    "type": "patch",
-                    "path": "patches/gx_no_glibmm.patch"
+                    "paths": [
+                        "patches/guitarix-metainfo.patch",
+                        "patches/guitarix-pthread-crash.patch",
+                        "patches/gx_no_glibmm.patch"
+                    ]
                 },
                 {
                     "type": "file",
