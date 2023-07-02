@@ -2,16 +2,6 @@ diff --git a/trunk/org.guitarix.guitarix.metainfo.xml b/trunk/org.guitarix.guita
 index 4b3389c0..dbdb0ffa 100644
 --- a/org.guitarix.guitarix.metainfo.xml
 +++ b/org.guitarix.guitarix.metainfo.xml
-@@ -1,8 +1,8 @@
- <?xml version="1.0" encoding="UTF-8"?>
- <component type="desktop-application">
--  <id>org.guitarix.guitarix</id>
-+  <id>org.guitarix.Guitarix</id>
-   
-   <name>guitarix</name>
-   <summary>virtual versatile amplification for Jack/Linux </summary>
-   
-   <metadata_license>FSFAP</metadata_license>
 @@ -33,8 +33,9 @@
      </screenshot>
    </screenshots>
