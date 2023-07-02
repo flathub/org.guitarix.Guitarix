@@ -136,6 +136,7 @@
                 "install -Dm644 -t $FLATPAK_DEST/share/icons/hicolor/128x128/apps ${FLATPAK_DEST}/share/pixmaps/gx_head.png",
                 "mv /app/bin/guitarix /app/bin/guitarix.bin",
                 "install -Dm755 guitarix-wrap.sh /app/bin/guitarix",
+                "appstream-util modify $FLATPAK_DEST/share/metainfo/org.guitarix.guitarix.metainfo.xml id ${FLATPAK_ID}",
                 "install -Dm644 -t ${PLUGINS_DIR}/share/metainfo org.freedesktop.LinuxAudio.Plugins.Guitarix.metainfo.xml",
                 "appstream-compose --basename=org.freedesktop.LinuxAudio.Plugins.Guitarix --prefix=${PLUGINS_DIR} --origin=flatpak org.freedesktop.LinuxAudio.Plugins.Guitarix"
             ],
