@@ -136,9 +136,8 @@
                 "desktop-file-edit --set-icon=${FLATPAK_ID} $FLATPAK_DEST/share/applications/guitarix.desktop",
                 "mv /app/bin/guitarix /app/bin/guitarix.bin",
                 "install -Dm755 guitarix-wrap.sh /app/bin/guitarix",
-                "appstream-util modify $FLATPAK_DEST/share/metainfo/org.guitarix.guitarix.metainfo.xml id ${FLATPAK_ID}",
                 "install -Dm644 -t ${PLUGINS_DIR}/share/metainfo org.freedesktop.LinuxAudio.Plugins.Guitarix.metainfo.xml",
-                "appstream-compose --basename=org.freedesktop.LinuxAudio.Plugins.Guitarix --prefix=${PLUGINS_DIR} --origin=flatpak org.freedesktop.LinuxAudio.Plugins.Guitarix"
+                "appstreamcli compose --components=org.freedesktop.LinuxAudio.Plugins.Guitarix --prefix=/ --origin=org.freedesktop.LinuxAudio.Plugins.Guitarix --result-root=${PLUGINS_DIR} --data-dir=${PLUGINS_DIR}/share/app-info/xmls ${PLUGINS_DIR}"
             ],
             "sources": [
                 {
