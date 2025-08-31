@@ -8,7 +8,7 @@ diff --git a/src/LV2/gxtuner.lv2/gx_pitch_tracker.h b/src/LV2/gxtuner.lv2/gx_pit
 index 54333290..8e07d085 100644
 --- a/src/LV2/gxtuner.lv2/gx_pitch_tracker.h
 +++ b/src/LV2/gxtuner.lv2/gx_pitch_tracker.h
-@@ -24,9 +24,11 @@
+@@ -24,13 +24,15 @@
  
  #ifndef SRC_HEADERS_GX_PITCH_TRACKER_H_
  #define SRC_HEADERS_GX_PITCH_TRACKER_H_
@@ -16,7 +16,11 @@ index 54333290..8e07d085 100644
 +#undef min
 +#include <boost/signals2/signal.hpp>
  #include <fftw3.h>
+ #ifdef __APPLE__
+ #include <dispatch/dispatch.h>
+ #else
  #include <semaphore.h>
+ #endif
 -#include <sigc++/sigc++.h>
  
  /* ------------- Pitch Tracker ------------- */

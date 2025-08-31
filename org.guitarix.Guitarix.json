@@ -74,7 +74,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://boostorg.jfrog.io/artifactory/main/release/1.77.0/source/boost_1_77_0.tar.bz2",
+                    "url": "https://archives.boost.io/release/1.77.0/source/boost_1_77_0.tar.bz2",
                     "sha256": "fc9f85fc030e233142908241af7a846e60630aa7388de9a5fafb1f3a26840854"
                 }
             ]
@@ -115,8 +115,7 @@
                             "OPTIMIZATION": "-march=armv8-a"
                         }
                     }
-                },
-                "cxxflags": "-fpermissive"
+                }
             },
             "build-commands": [
                 "python3 ./waf configure --prefix=$FLATPAK_DEST --lv2dir=${PLUGINS_DIR}/lv2 --ldflags=-L$FLATPAK_DEST/lib --no-avahi --no-bluez --install-roboto-font --no-faust --cxxflags=\"$OPTIMIZATION -ftree-loop-linear -fno-math-errno -fno-signed-zeros -fstrength-reduce -pipe\" --includeconvolver --includeresampler",
@@ -134,8 +133,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/brummer10/guitarix/releases/download/V0.46.0/guitarix2-0.46.0.tar.xz",
-                    "sha256": "c660beb3f16cdc455d99e6f074cd6ea2b1f10c1dfc480e84210461637dc98c44"
+                    "url": "https://github.com/brummer10/guitarix/releases/download/V0.47.0/guitarix2-0.47.0.tar.xz",
+                    "sha256": "f18abd3bd2cb05960d00f15f36c63f97eb1759f9571977e3e42191ff16b9b467"
                 },
                 {
                     "type": "patch",
