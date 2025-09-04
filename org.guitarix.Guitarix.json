@@ -1,7 +1,7 @@
 {
     "app-id": "org.guitarix.Guitarix",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "24.08",
+    "runtime-version": "25.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "guitarix",
     "rename-appdata-file": "org.guitarix.guitarix.metainfo.xml",
@@ -38,7 +38,7 @@
     "add-extensions": {
         "org.freedesktop.LinuxAudio.Plugins": {
             "directory": "extensions/Plugins",
-            "version": "24.08",
+            "version": "25.08",
             "add-ld-path": "lib",
             "merge-dirs": "ladspa;lv2",
             "subdirectories": true,
@@ -47,7 +47,7 @@
         },
         "org.freedesktop.LinuxAudio.Plugins.Guitarix": {
             "directory": "extensions/Plugins/Guitarix",
-            "version": "24.08",
+            "version": "25.08",
             "add-ld-path": "lib",
             "bundle": true,
             "subdirectories": true,
