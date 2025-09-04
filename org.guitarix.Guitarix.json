@@ -6,6 +6,7 @@
     "command": "guitarix",
     "rename-appdata-file": "org.guitarix.guitarix.metainfo.xml",
     "rename-desktop-file": "guitarix.desktop",
+    "rename-icon": "gx_head",
     "finish-args": [
         "--share=ipc",
         "--socket=x11",
@@ -123,8 +124,7 @@
                 "python3 ./waf install"
             ],
             "post-install": [
-                "install -Dm644 org.guitarix.Guitarix.png -t $FLATPAK_DEST/share/icons/hicolor/128x128/apps",
-                "desktop-file-edit --set-icon=${FLATPAK_ID} $FLATPAK_DEST/share/applications/guitarix.desktop",
+                "install -Dm644 org.guitarix.Guitarix.png $FLATPAK_DEST/share/icons/hicolor/128x128/apps/gx_head.png",
                 "mv /app/bin/guitarix /app/bin/guitarix.bin",
                 "install -Dm755 guitarix-wrap.sh /app/bin/guitarix",
                 "install -Dm644 -t ${PLUGINS_DIR}/share/metainfo org.freedesktop.LinuxAudio.Plugins.Guitarix.metainfo.xml",
