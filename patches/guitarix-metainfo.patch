@@ -19,24 +19,3 @@ index 5ada250..abf847a 100644
      <release version="0.46" date="2024-03-11" />
    </releases>
  </component>
-diff --git a/org.guitarix.guitarix.metainfo.xml b/org.guitarix.guitarix.metainfo.xml
-index e0ba50d39..cd0f707aa 100644
---- a/org.guitarix.guitarix.metainfo.xml
-+++ b/org.guitarix.guitarix.metainfo.xml
-@@ -23,13 +23,13 @@
-   <launchable type="desktop-id">guitarix.desktop</launchable>
-   <screenshots>
-     <screenshot type="default">
--      <image>https://guitarix.org/images/screenshots/Guitarix_0.35.0.jpg</image>
-+      <image>http://guitarix.org/images/screenshots/Guitarix_0.35.0.jpg</image>
-     </screenshot>
-     <screenshot>
--      <image>https://guitarix.org/images/screenshots/Guitarix_0.35.0_2.jpg</image>
-+      <image>http://guitarix.org/images/screenshots/Guitarix_0.35.0_2.jpg</image>
-     </screenshot>
-     <screenshot>
--      <image>https://guitarix.org/images/screenshots/Guitarix_0.35.0_Skin_Dark.jpg</image>
-+      <image>http://guitarix.org/images/screenshots/Guitarix_0.35.0_Skin_Dark.jpg</image>
-     </screenshot>
-   </screenshots>
-   <url type="homepage">https://guitarix.org</url>
