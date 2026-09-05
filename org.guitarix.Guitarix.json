@@ -11,7 +11,7 @@
         "--share=ipc",
         "--socket=x11",
         "--socket=pulseaudio",
-        "--filesystem=xdg-run/pipewire-0",
+        "--filesystem=xdg-run/pipewire-0:ro",
         "--filesystem=home",
         "--share=network",
         "--env=TMPDIR=/var/tmp",
