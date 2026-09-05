@@ -1,7 +1,7 @@
 {
     "app-id": "org.guitarix.Guitarix",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "25.08",
+    "runtime-version": "26.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "guitarix",
     "rename-appdata-file": "org.guitarix.guitarix.metainfo.xml",
@@ -39,7 +39,7 @@
     "add-extensions": {
         "org.freedesktop.LinuxAudio.Plugins": {
             "directory": "extensions/Plugins",
-            "version": "25.08",
+            "version": "26.08",
             "add-ld-path": "lib",
             "merge-dirs": "ladspa;lv2",
             "subdirectories": true,
@@ -48,7 +48,7 @@
         },
         "org.freedesktop.LinuxAudio.Plugins.Guitarix": {
             "directory": "extensions/Plugins/Guitarix",
-            "version": "25.08",
+            "version": "26.08",
             "add-ld-path": "lib",
             "bundle": true,
             "subdirectories": true,
@@ -58,6 +58,7 @@
     },
     "modules": [
         "gtkmm.json",
+        "shared-modules/appstream/appstream-compose.json",
         "shared-modules/intltool/intltool-0.51.json",
         {
             "name": "boost",
@@ -89,6 +90,9 @@
             "name": "eigen",
             "builddir": true,
             "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF"
+            ],
             "cleanup": [
                 "/share"
             ],
