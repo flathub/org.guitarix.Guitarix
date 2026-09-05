@@ -6,12 +6,11 @@
     "sources": [
         {
             "type": "archive",
-            "url": "https://github.com/sass/sassc/archive/3.5.0.tar.gz",
-            "sha256": "26f54e31924b83dd706bc77df5f8f5553a84d51365f0e3c566df8de027918042"
+            "url": "https://github.com/sass/sassc/archive/3.6.2.tar.gz",
+            "sha256": "608dc9002b45a91d11ed59e352469ecc05e4f58fc1259fc9a9f5b8f0f8348a03"
         },
         {
-            "type": "script",
-            "dest-filename": "autogen.sh",
+            "type": "shell",
             "commands": [
                 "autoreconf -si"
             ]
@@ -26,12 +25,11 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/sass/libsass/archive/3.5.4.tar.gz",
-                    "sha256": "5f61cbcddaf8e6ef7a725fcfa5d05297becd7843960f245197ebb655ff868770"
+                    "url": "https://github.com/sass/libsass/archive/3.6.6.tar.gz",
+                    "sha256": "11f0bb3709a4f20285507419d7618f3877a425c0131ea8df40fe6196129df15d"
                 },
                 {
-                    "type": "script",
-                    "dest-filename": "autogen.sh",
+                    "type": "shell",
                     "commands": [
                         "autoreconf -si"
                     ]
